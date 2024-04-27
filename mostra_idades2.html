@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><hr><br>"); // esse <hr> mostra uma linha abaixo, como se fosse separando uma linha da outra
+}
+
+function mostra(frase) {
+    document.write("<big>" + frase + "</big>"); // lembrar de colocar a tag entre aspas, caso contrário não funcionará
+    pulaLinha();
+}
+
+var ano = 2024;
+mostra("Eu nasci em: " + (ano - 43));
+mostra("Adriano nasceu em: " + (ano - 26));
+mostra("Paulo nasceu em: " + (ano - 32));
+
+</script>

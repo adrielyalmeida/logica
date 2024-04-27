@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var idade = parseInt(prompt("Digite sua idade"));
+
+while( isNaN(idade) ) { // Caso a pessoa digite um texto, o resultado será NaN. E assim, o prompt pede de novo, até a pessoa digitar um número válido, e não um texto
+    idade = parseInt(prompt("Digite sua idade"));    
+}
+
+alert(idade);
+
+</script>

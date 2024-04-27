@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var numeroPensado = Math.round(Math.random() * 10); // Math random, gera um número aleatório. Multiplicando por 10, gera um número de 0 a 10. E o Math.round arredonda. Se multiplicar por 100, será números até 100
+var tentativas = 1;
+
+while(tentativas <=3) {
+    var chute = parseInt(prompt("Digite seu chute!"));
+    if(chute == numeroPensado) {
+        mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+        break;
+              // ou tentativas = 4;
+
+    } else { // em vez de fazer outro if como abaixo, posso 
+        
+        mostra("Você ERROU!");
+    }
+    tentativas++;
+}
+
+mostra("FIM");
+
+// if(chute != numeroPensado) {  // != é diferente
+    // mostra("Você errou, o número pensado foi " + numeroPensado + "!");
+
+</script>

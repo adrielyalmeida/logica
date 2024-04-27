@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+// var limite = parseInt(prompt("Entre com a data limite")); // se eu adicionar essa variável, tenho que na condição do while colocar anoCopa <= limite, aí posso dizer até que ano quero saber qdo teve copa
+var anoCopa = 1930;
+
+while(anoCopa <= 2024) {
+    mostra("Teve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
+}
+ 
+mostra("FIM!");
+
+</script>

@@ -1,0 +1,38 @@
+<canvas width = "600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas"); // pega o canvas no mundo HTML e traz para o mundo Java Script
+    var pincel = tela.getContext("2d"); // Cria o pincel para desenhar na tela em 2d
+
+    // Essas 2 linhas abaixo, podem ser retiradas, se quisermos o retângulo branco, como a bandeira da Itália
+    pincel.fillStyle = "lightgrey"; // Recebe o valor que é a cor, no caso cinza. fillStyle tem que vir antes do fillRect, pois para pintar, tenho que ter a cor (tinta)
+    pincel.fillRect(0, 0, 600, 400); // Desenha o retângulo do tamanho pedido, só que preto. Fill = preencher
+    pincel.fillStroke = "black"; // muda a cor do pincel para desenhar a borda
+    pincel.strokeRect(0, 0, 600, 400); // desenha a borda nas mesmas coordenadas do retângulo
+    
+    pincel.fillStyle = "green"; // mudou a cor
+    pincel.fillRect(0, 0, 200, 400);
+    pincel.strokeRect(0, 0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+    pincel.strokeRect(400, 0, 200, 400);
+
+    // Criação de triângulo, abaixo.
+
+    pincel.fillStyle = "yellow";
+    pincel.beginPath(); // Iniciar um caminho   // abaixo cria as linhas de ponto a ponto
+    pincel.moveTo(300, 200); // pincel move até. Marca o primeiro ponto noc entro da tela
+    pincel.lineTo(200, 400); // o pincel sai do ponto acima (centro), e vai até o ponto indicado, fazendo assim uma das laterais do triângulo
+    pincel.lineTo(400, 400);  
+    pincel.fill(); // para preencher o espaço que foi marcado nas 3 linhas acima
+
+    // Criação de círculo, abaixo
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); // Centro do círculo, no ponto escolhido por mim, o raio = 50, ângulo inicial = 0, e o ângulo final em radiano (x, y, r,Âi, Âf)
+    pincel.fill();
+
+</script>

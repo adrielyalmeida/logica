@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function calculaImc(peso, altura) {
+    var imc = peso / (altura * altura);
+    return imc; // retorna valor do cálculo acima para a var imcAdriely, variável a esquerda    
+}
+
+// function calculaImc(peso, altura) {           se substituir a function acima por essa, dá no mesmo
+   // return = peso / (altura * altura);
+// }
+
+var imcAdriely = calculaImc(66, 1.60); // retorna o valor do cálculo para essa variável
+var imcAna = calculaImc(88,1.68); // retorna o valor desse novo cálculo para a variável imcAna
+var totalImc = imcAdriely + imcAna;
+
+document.write("A soma dos imc's é: " + totalImc);
+
+</script>
